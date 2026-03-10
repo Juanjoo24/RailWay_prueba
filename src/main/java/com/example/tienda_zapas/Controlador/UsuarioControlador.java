@@ -15,15 +15,16 @@ public class UsuarioControlador {
     @Autowired
     private UsuarioRepositorio usuarioRepositorio;
 
-    @GetMapping("/registro")
+    @GetMapping("/register")
     public String mostrarFormulario(Model model) {
         model.addAttribute("usuario", new Usuario());
         return "HTML/register"; 
     }
 
-    @PostMapping("/registro")
+    @PostMapping("/usuarios/registrar")
     public String guardarUsuario(@ModelAttribute("usuario") Usuario usuario) {
         usuarioRepositorio.save(usuario);
-        return "redirect:/HTML/login?exito";
+      
+        return "redirect:/login?exito";
     }
 }

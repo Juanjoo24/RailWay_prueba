@@ -5,35 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="index.css">
+    
+    <link rel="stylesheet" href="/css/index.css">
+    
     <title>ZapaJuan - Tienda de Zapatillas</title>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg sticky-top custom-navbar">
+    <nav class="navbar navbar-expand-lg sticky-top bg-white shadow-sm">
         <div class="container-fluid">
-            <a class="navbar-brand fw-bold fs-5 d-flex align-items-center" href="index.html">
-                <img src="imagenes/logoTienda.png" alt="Logo ZapaJuan" style="height: 100px; width: auto; margin-right: 10px;">
+            <a class="navbar-brand fw-bold fs-5 d-flex align-items-center" href="/">
+                <img src="/imagenes/logoTienda.png" alt="Logo ZapaJuan" style="height: 60px; width: auto; margin-right: 10px;">
                 <span class="brand-text">ZapaJuan</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="accountDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="accountDropdown" role="button" data-bs-toggle="dropdown">
                             <i class="bi bi-person-circle me-2"></i>Cuenta
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-end custom-dropdown" aria-labelledby="accountDropdown">
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="accountDropdown">
                             <li>
-                                <a class="dropdown-item" href="HTML/login.html">
+                                <a class="dropdown-item" href="/login">
                                     <i class="bi bi-door-open me-2"></i>Iniciar Sesión
                                 </a>
                             </li>
                             <li><hr class="dropdown-divider"></li>
                             <li>
-                                <a class="dropdown-item" href="HTML/register.html">
+                                <a class="dropdown-item" href="/register">
                                     <i class="bi bi-person-plus me-2"></i>Registrarse
                                 </a>
                             </li>
@@ -44,93 +46,48 @@
         </div>
     </nav>
 
-
     <main>
         <div class="container mt-5 mb-5">
-            
             <div class="row g-4">
-                <!-- Card 1 -->
                 <div class="col-md-6 col-lg-4">
                     <div class="card h-100 shadow-sm">
-                        <img src="imagenes/jordan 1 retro.png" class="card-img-top" alt="Zapatilla Jordan 1 Retro" style="height: 250px; object-fit: cover;">
+                        <img src="/imagenes/jordan 1 retro.png" class="card-img-top" alt="Jordan 1" style="height: 250px; object-fit: contain; background: #f8f9fa;">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Jordan 1 Retro</h5>
-                            <p class="card-text text-muted">Fragment x Union LA Varsity Red Sport Royal</p>
+                            <p class="card-text text-muted small">Fragment x Union LA Varsity Red Sport Royal</p>
                             <p class="fw-bold text-primary fs-5 mt-auto">218€</p>
                             <button class="btn btn-primary w-100">Agregar al carrito</button>
-                            
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 2 -->
                 <div class="col-md-6 col-lg-4">
                     <div class="card h-100 shadow-sm">
-                        <img src="imagenes/Saucony ProGrid Omni 9.jpg" class="card-img-top" alt="Saucony ProGrid Omni 9" style="height: 250px; object-fit: cover;">
+                        <img src="/imagenes/Saucony ProGrid Omni 9.jpg" class="card-img-top" alt="Saucony" style="height: 250px; object-fit: contain; background: #f8f9fa;">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Urban Style</h5>
-                            <p class="card-text text-muted">Silver Pink</p>
+                            <p class="card-text text-muted small">Silver Pink</p>
                             <p class="fw-bold text-primary fs-5 mt-auto">99.30€</p>
                             <button class="btn btn-primary w-100">Agregar al carrito</button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 3 -->
                 <div class="col-md-6 col-lg-4">
                     <div class="card h-100 shadow-sm">
-                        <img src="imagenes/arimax.jpg" class="card-img-top" alt="Nike Air Max" style="height: 250px; object-fit: cover;">
+                        <img src="/imagenes/arimax.jpg" class="card-img-top" alt="Nike Air Max" style="height: 250px; object-fit: contain; background: #f8f9fa;">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Nike Air Max 95</h5>
-                            <p class="card-text text-muted">Court Purple Wild Grape Camo</p>
+                            <p class="card-text text-muted small">Court Purple Wild Grape Camo</p>
                             <p class="fw-bold text-primary fs-5 mt-auto">203€</p>
                             <button class="btn btn-primary w-100">Agregar al carrito</button>
                         </div>
                     </div>
                 </div>
-
-                <!-- Card 4 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="card h-100 shadow-sm">
-                        <img src="imagenes/zapatilla4.jpg" class="card-img-top" alt="Zapatilla Hiking Trek" style="height: 250px; object-fit: cover;">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Hiking Trek</h5>
-                            <p class="card-text text-muted">Zapatilla de senderismo con tracción superior e impermeabilidad garantizada.</p>
-                            <p class="fw-bold text-primary fs-5 mt-auto">$139.99</p>
-                            <button class="btn btn-primary w-100">Agregar al carrito</button>
-                        </div>
-                    </div>
+                
                 </div>
-
-                <!-- Card 5 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="card h-100 shadow-sm">
-                        <img src="imagenes/zapatilla5.jpg" class="card-img-top" alt="Zapatilla Casual Comfort" style="height: 250px; object-fit: cover;">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Casual Comfort</h5>
-                            <p class="card-text text-muted">Zapatilla ultra cómoda ideal para caminar largas distancias sin fatiga.</p>
-                            <p class="fw-bold text-primary fs-5 mt-auto">$99.99</p>
-                            <button class="btn btn-primary w-100">Agregar al carrito</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 6 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="card h-100 shadow-sm">
-                        <img src="imagenes/zapatilla6.jpg" class="card-img-top" alt="Zapatilla Gym Training" style="height: 250px; object-fit: cover;">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Gym Training</h5>
-                            <p class="card-text text-muted">Zapatilla deportiva diseñada para entrenamientos en el gimnasio y actividades CrossFit.</p>
-                            <p class="fw-bold text-primary fs-5 mt-auto">$119.99</p>
-                            <button class="btn btn-primary w-100">Agregar al carrito</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </main>
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
