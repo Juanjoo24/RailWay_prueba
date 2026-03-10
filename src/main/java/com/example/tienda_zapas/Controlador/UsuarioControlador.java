@@ -18,12 +18,12 @@ public class UsuarioControlador {
     @GetMapping("/register")
     public String mostrarFormulario(Model model) {
         model.addAttribute("usuario", new Usuario());
-        return "HTML/register"; 
+        return "html/register"; 
     }
 
     @GetMapping("/login")
     public String login() {
-        return "HTML/login"; 
+        return "html/login"; 
     }
 
     @PostMapping("/usuarios/registrar")
