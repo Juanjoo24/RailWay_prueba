@@ -21,10 +21,14 @@ public class UsuarioControlador {
         return "HTML/register"; 
     }
 
+    @GetMapping("/login")
+    public String login() {
+        return "HTML/login"; 
+    }
+
     @PostMapping("/usuarios/registrar")
     public String guardarUsuario(@ModelAttribute("usuario") Usuario usuario) {
         usuarioRepositorio.save(usuario);
-      
         return "redirect:/login?exito";
     }
 }

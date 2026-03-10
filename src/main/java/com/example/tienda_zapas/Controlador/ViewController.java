@@ -10,14 +10,4 @@ public class ViewController {
     public String index() {
         return "index"; 
     }
-
-    @GetMapping("/login")
-    public String login() {
-        return "HTML/login"; 
-    }
-
-    @GetMapping("/register")
-    public String register() {
-        return "HTML/register"; 
-    }
 }
