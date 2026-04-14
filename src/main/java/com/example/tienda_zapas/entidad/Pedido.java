@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "pedidos") // Nombre de la tabla en la BD
+@Table(name = "pedidos") 
 public class Pedido {
 
     @Id
@@ -28,8 +28,6 @@ public class Pedido {
         this.fecha = LocalDateTime.now();
         this.estado = "PAGADO";
     }
-
-    // Constructor útil
     public Pedido(Usuario usuario, Double total, String direccionEntrega) {
         this.usuario = usuario;
         this.total = total;
