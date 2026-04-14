@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <title>ZapaJuan - Confirmar Pedido</title>
+    <style>
+        .card { border-radius: 20px; border: none; }
+        .form-control { border-radius: 10px; padding: 12px; }
+        /* Estilo para resaltar que solo se acepta tarjeta */
+        .payment-method-card { border: 2px solid #0d6efd; border-radius: 15px; background-color: #f8fbff; }
+        .total-price { font-size: 2rem; color: #0d6efd; }
+        .btn-pay { padding: 15px; border-radius: 12px; }
+    </style>
+</head>
+<body class="bg-light">
+    <div class="container py-5">
+        <div class="row g-4">
+            <div class="col-lg-8">
+                <div class="card shadow-sm p-4 mb-4 bg-white">
+                    <h2 class="h3 fw-bold mb-4">Tu Cesta</h2>
+                    <table class="table table-borderless align-middle mb-0">
+                        <tbody id="lista-carrito"></tbody>
+                    </table>
+                </div>
+
+                <div class="card shadow-sm p-4 bg-white">
+                    <h2 class="h3 fw-bold mb-4"><i class="bi bi-credit-card me-2"></i>Pago Seguro con Tarjeta</h2>
+                    
+                    <div class="row mb-4">
+                        <div class="col-12">
+                            <div class="payment-method-card p-3 text-center">
+                                <i class="bi bi-shield-check text-primary fs-4 me-2"></i>
+                                <span class="fw-bold">Pago 100% Encriptado</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form id="form-registro">
+                        <div class="mb-3">
+                            <label class="form-label fw-bold small">Datos de Envío</label>
+                            <input type="text" id="direccion-input" class="form-control mb-3" placeholder="Dirección Completa de Envío" required>
+                            <input type="tel" id="telefono-input" class="form-control mb-3" placeholder="Teléfono de Contacto" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-bold small">Detalles de la Tarjeta</label>
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <input type="text" class="form-control" placeholder="Número de Tarjeta (16 dígitos)" maxlength="16" required>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" class="form-control" placeholder="MM/AA" maxlength="5" required>
+                                </div>
+                                <div class="col-6">
+                                    <input type="password" class="form-control" placeholder="CVC" maxlength="3" required>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card shadow-sm p-4 bg-white sticky-top" style="top: 2rem;">
+                    <h2 class="h3 fw-bold mb-4">Resumen</h2>
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Subtotal</span>
+                        <span id="subtotal">0.00€</span>
+                    </div>
+                    <div class="d-flex justify-content-between mb-4">
+                        <span>Envío</span>
+                        <span class="text-success fw-bold">Gratis</span>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <span class="fs-4 fw-bold">TOTAL</span>
+                        <span id="total" class="total-price fw-bold">0.00€</span>
+                    </div>
+                    
+                    <button type="submit" form="form-registro" class="btn btn-dark w-100 btn-pay fw-bold mb-3">
+                        FINALIZAR COMPRA
+                    </button>
+                    
+                    <a th:href="@{/bienvenida}" class="btn btn-outline-secondary w-100 py-2 fw-bold">
+                        <i class="bi bi-arrow-left me-1"></i> VOLVER ATRÁS
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script th:src="@{/js/confirmacion.js}"></script>
+</body>
+</html>
